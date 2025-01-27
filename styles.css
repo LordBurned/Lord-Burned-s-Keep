@@ -6,7 +6,7 @@
 
 :root{
     --orange:#d45c00;
-    --dark_orange:#7c3306;
+    --green:#52D400;
     --dark_gray:#404040;
     --gray:#6c6a68;
     --light_gray:#b3b2b0;
@@ -31,7 +31,7 @@ img{
 }
 
 .highlight{
-    color: var(--orange);
+    color: var(--green);
 }
 
 div{
@@ -59,25 +59,29 @@ p{
     justify-self: center;
 }
 
-body{
+html, body{
     font-size: 1em;
     background-color: var(--black);
     text-align: center;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* Adiciona rolagem suave */
+    overflow-x: hidden; /* Evita rolagem horizontal */
 }
 
 nav{
     font-size: 1.2em;
-
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
     ul{
         list-style: none;
         padding: 0;
         margin: 0;
         display: inline-flex;
-        gap: 20px;
-
+        gap: 10px;
         li{
             display: inline;
-
             a{
                 text-decoration: none;
                 padding: 10px 15px;
@@ -86,21 +90,56 @@ nav{
             }
             a:hover{
                 color: var(--orange);
+                background-color: var(--dark_gray);
             }
         }
     }
 }
 
 header{
-    padding-top: 40px;
-    padding-bottom: 30px;
-    justify-content: center;
+    padding: 30px 20px;
+    justify-content: space-between;
     align-items: center;
     margin: auto;
-        nav{
-        padding-top: 30px;
+    display: flex;
+    nav{
+        input{
+            display: none;
+        }
+        .button{
+            display: none;
+            color: var(--blue);
+            position: fixed;
+            z-index: 3;
+            @media (max-width: 880px) {    
+                display: flex;
+                right: 20px;
+                position: fixed;
+            }
+        }
     }
-}
+
+    @media (max-width: 880px) {
+        .sidebar{
+            display: flex;
+            overflow: hidden;
+            flex-direction: column;
+            height: 100%;
+            width: 0%;
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            right: 0;
+            background-color: var(--black);
+            padding-top: 60px;
+            text-align:center;
+            transition: 0.3s ease-out;
+        }
+        #sidebar_active:checked ~ .sidebar{
+            width: 100%;
+        }
+    }
+}       
 
 footer{
     display: flex;

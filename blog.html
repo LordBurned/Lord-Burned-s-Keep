@@ -3,43 +3,46 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Legend of Uxina</title> <!--Title for your website-->
+        <title>Lord Burned's Keep</title> <!--Title for your website-->
         <link rel="stylesheet" href="styles.css"> <!--Link to your css file to chnage the style-->
         <script src="scripts.js"></script> <!--Link to your javasript to make nice animations and other nice things-->
-        <!-- <link rel="icon" type="image/jpg" href=""> Add icon to your website -->
     </head>
     <body>
         <header>
-            <a><h1>Legend of Uxina</h1></a>
+            <a>
+                <h1>Lord Burned's Keep</h1>
+            </a>
             <nav>
-                <ul id="menu">
+                <input type="checkbox" id="sidebar_active">
+                <label for="sidebar_active" class="button">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
+                    </svg> 
+                </label>
+                <ul class="sidebar">
                     <li>
                         <a href="index.html">Home</a>
                     </li>
                     <li>
                         <a href="blog.html">Blog</a>
                     </li>
+                    <li>
+                        <a href="about_me.html">About Me</a>
+                    </li>
+                    <li>
+                        <a href="my_game.html">My Game</a>
+                    </li>
                 </ul>
             </nav>
         </header>
         <main>
-            <div>
+            <div class="container">
                 <h2>
-                    22 January 2024
+                    
                 </h2>
                 <p>
-                    An idea how the menu button will work.
+                    
                 </p>
-                <a><img src="imgs/Button.gif" width="300" height="100"></a>
-            </div>
-            <div>
-                <h2>
-                    21 January 2024
-                </h2>
-                <p>
-                    Made this image for the tittle of the game, dont know yet about the style, maybe its a little difficult to read it. 
-                </p>
-                <a><img src="imgs/Titlel.png" width="500" height="300"></a>
             </div>
             <footer>
                 <nav>
@@ -50,9 +53,15 @@
                         <li>
                             <a href="blog.html">Blog</a>
                         </li>
+                        <li>
+                            <a href="about_me.html">About Me</a>
+                        </li>
+                        <li>
+                            <a href="my_game.html">My Game</a>
+                        </li>
                     </ul>
                 </nav>
             </footer>
         </main>
     </body>
-</html>
+</html>      
